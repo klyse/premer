@@ -19,6 +19,7 @@
 		400B4F952A0588F800374EB6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		400B4F972A0588F900374EB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		400B4F9A2A0588F900374EB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		407C52DB2A05AB0F0020FF01 /* premer-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "premer-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +52,7 @@
 		400B4F922A0588F800374EB6 /* premer Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				407C52DB2A05AB0F0020FF01 /* premer-Watch-App-Info.plist */,
 				400B4F932A0588F800374EB6 /* premerApp.swift */,
 				400B4F952A0588F800374EB6 /* ContentView.swift */,
 				400B4F972A0588F900374EB6 /* Assets.xcassets */,
@@ -265,6 +267,7 @@
 				DEVELOPMENT_TEAM = 3S86R3L8VY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "premer-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = premer;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = eu.klyse.premer;
@@ -296,6 +299,7 @@
 				DEVELOPMENT_TEAM = 3S86R3L8VY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "premer-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = premer;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = eu.klyse.premer;
