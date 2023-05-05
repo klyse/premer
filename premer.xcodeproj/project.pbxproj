@@ -11,6 +11,7 @@
 		400B4F962A0588F800374EB6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400B4F952A0588F800374EB6 /* ContentView.swift */; };
 		400B4F982A0588F900374EB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 400B4F972A0588F900374EB6 /* Assets.xcassets */; };
 		400B4F9B2A0588F900374EB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 400B4F9A2A0588F900374EB6 /* Preview Assets.xcassets */; };
+		407C52DD2A05ACFC0020FF01 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407C52DC2A05ACFC0020FF01 /* ExtensionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		400B4F972A0588F900374EB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		400B4F9A2A0588F900374EB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		407C52DB2A05AB0F0020FF01 /* premer-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "premer-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		407C52DC2A05ACFC0020FF01 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				407C52DB2A05AB0F0020FF01 /* premer-Watch-App-Info.plist */,
 				400B4F932A0588F800374EB6 /* premerApp.swift */,
 				400B4F952A0588F800374EB6 /* ContentView.swift */,
+				407C52DC2A05ACFC0020FF01 /* ExtensionDelegate.swift */,
 				400B4F972A0588F900374EB6 /* Assets.xcassets */,
 				400B4F992A0588F900374EB6 /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			files = (
 				400B4F962A0588F800374EB6 /* ContentView.swift in Sources */,
 				400B4F942A0588F800374EB6 /* premerApp.swift in Sources */,
+				407C52DD2A05ACFC0020FF01 /* ExtensionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

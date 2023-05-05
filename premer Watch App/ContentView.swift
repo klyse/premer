@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  premer Watch App
-//
-//  Created by Klaus on 2023-05-05.
-//
-
 import SwiftUI
 import WatchKit
 import Combine
@@ -14,6 +7,7 @@ struct ContentView: View {
     @State var remainingTime: Int = 60
     @State var timerActive = false
     @State private var timer: Timer? = nil
+    @State private var session: WKExtendedRuntimeSession?
     
     var body: some View {
         VStack {
@@ -34,7 +28,7 @@ struct ContentView: View {
                 Spacer()
                 if (!timerActive){
                     Picker(selection: $talkTime, label: Text("Time")) {
-                        ForEach(1..<61, id: \.self) { i in
+                        ForEach(3..<61, id: \.self) { i in
                             Text("\(i)")
                         }
                     }
@@ -85,7 +79,7 @@ struct ContentView: View {
     
     private func startTimer() {
         remainingTime = talkTime
-        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
             if remainingTime > 0 {
                 remainingTime -= 1
                 
@@ -99,30 +93,36 @@ struct ContentView: View {
                 playHapticFeedback(.success, count: 2, delay: 1);
             }
         }
+        
+        let session = WKExtendedRuntimeSession()
+        session.delegate = WKExtension.shared().delegate as? WKExtendedRuntimeSessionDelegate
+        session.start()
+        self.session = session
     }
     
     func playHapticFeedback(_ hapticType: WKHapticType, count: Int, delay: TimeInterval) {
-         let device = WKInterfaceDevice.current()
+        let device = WKInterfaceDevice.current()
+        
+        if count > 0 {
+            device.play(hapticType)
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                self.playHapticFeedback(hapticType, count: count - 1, delay: delay)
+            }
+        }
+    }
 
-         if count > 0 {
-             device.play(hapticType)
-             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                 self.playHapticFeedback(hapticType, count: count - 1, delay: delay)
-             }
-         }
-     }
-    
     private func stopTimer() {
         timerActive = false
         timer?.invalidate()
         timer = nil
+        session?.invalidate()
     }
-    
+
     private func calcReminders() -> Int {
         if (talkTime < 4) {
             return 1;
         }
-        
+
         return talkTime / 4
     }
 }
