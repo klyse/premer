@@ -55,7 +55,7 @@ struct ContentView: View {
                 Spacer()
             }
             
-            Text("Reminder every \(reminders()) min")
+            Text("Reminder every \(calcReminders()) min")
                 .foregroundColor(timerActive ? .red : .primary)
             
             Spacer()
@@ -65,9 +65,11 @@ struct ContentView: View {
                 
                 if (timerActive){
                     startTimer()
+                    WKInterfaceDevice.current().play(.start)
                 }
                 else {
                     stopTimer()
+                    WKInterfaceDevice.current().play(.stop)
                 }
                 
             } label: {
@@ -83,14 +85,32 @@ struct ContentView: View {
     
     private func startTimer() {
         remainingTime = talkTime
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
             if remainingTime > 0 {
                 remainingTime -= 1
+                
+                let reminders = calcReminders()
+                if (remainingTime % reminders == 0) {
+                    let progress = remainingTime / reminders
+                    playHapticFeedback(.directionUp, count: progress, delay: 0.5);
+                }
             } else {
                 stopTimer()
+                playHapticFeedback(.success, count: 2, delay: 1);
             }
         }
     }
+    
+    func playHapticFeedback(_ hapticType: WKHapticType, count: Int, delay: TimeInterval) {
+         let device = WKInterfaceDevice.current()
+
+         if count > 0 {
+             device.play(hapticType)
+             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                 self.playHapticFeedback(hapticType, count: count - 1, delay: delay)
+             }
+         }
+     }
     
     private func stopTimer() {
         timerActive = false
@@ -98,7 +118,7 @@ struct ContentView: View {
         timer = nil
     }
     
-    private func reminders() -> Int {
+    private func calcReminders() -> Int {
         if (talkTime < 4) {
             return 1;
         }
