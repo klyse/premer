@@ -13,7 +13,7 @@ export default function Main() {
           <div className="flex justify-center">
             <a
               className="inline-flex items-center px-5 py-3 mt-2 font-medium transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-gray-900"
-              href="https://apps.apple.com/us/app/premer/id6448866927"
+              href="#more"
             >
               <span className="justify-center">Find out more</span>
             </a>
@@ -27,7 +27,7 @@ export default function Main() {
           ></img>
         </div>
       </div>
-      <div className="grr max-w-7xl pt-20 mx-auto text-center">
+      <div id="more" className="grr max-w-7xl pt-20 mx-auto text-center">
         <h1 className="mb-8 text-6xl Avenir font-semibold">
           Never run out of time again.
         </h1>
@@ -42,6 +42,20 @@ export default function Main() {
           ></img>
         </div>
       </div>
+      <section className="relative">
+        <div className="mt-12">
+          <h1 className="mb-5 text-6xl Avenir font-semibold text-center">
+            Download for Free!
+          </h1>
+
+          <a
+            href="https://apps.apple.com/us/app/premer/id6448866927"
+            target="_blank"
+          >
+            <img src="/images/appstore.svg" className="m-auto w-44" />
+          </a>
+        </div>
+      </section>
       <section className="relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
           <div className="py-24 md:py-36">
