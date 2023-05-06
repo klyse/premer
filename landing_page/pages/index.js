@@ -6,7 +6,7 @@ import { NextSeo } from "next-seo";
 
 export default function Home() {
   return (
-    <div className="text-black">
+    <div>
       <NextSeo
         title="Home: premer"
         description="Welcome to premer homepage."
