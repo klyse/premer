@@ -32,7 +32,9 @@ export default function Main() {
           Never run out of time again.
         </h1>
         <h1 className="mb-8 text-2xl Avenir font-semibold text-center">
-          Get four vibration indications during your talk.
+          Get four vibration indications on your Apple Watch while your
+          presentation. You'll get a vibration after every quarter of your talk.
+          So you always know how much time is left.
         </h1>
         <div className="container flex flex-col items-center justify-center mx-auto rounded-lg ">
           <img
