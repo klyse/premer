@@ -11,7 +11,7 @@ export default function Header() {
             href="/"
             className="text-lg font-semibold rounded-lg tracking-widest focus:outline-none focus:shadow-outline"
           >
-            <h1 className="text-4xl Avenir tracking-tighter text-gray-900 md:text-4x1 lg:text-3xl">
+            <h1 className="text-4xl Avenir tracking-tighter md:text-4x1 lg:text-3xl">
               PREMER
             </h1>
           </a>
@@ -54,7 +54,7 @@ export default function Header() {
                 >
                   <span className="justify-center">Download</span>
                   <svg
-                    className="w-3 h-3 fill-current text-gray-400 flex ml-2 -mr-1"
+                    className="w-3 h-3 fill-current flex ml-2 -mr-1"
                     viewBox="0 0 12 12"
                     xmlns="http://www.w3.org/2000/svg"
                   >
