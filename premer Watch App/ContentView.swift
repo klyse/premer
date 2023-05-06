@@ -87,6 +87,11 @@ struct ContentView: View {
         .onAppear
         {
             loadValue()
+            gotFocus()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: WKExtension.applicationDidBecomeActiveNotification)) { _ in
+            loadValue()
+            gotFocus()
         }
     }
     
@@ -96,12 +101,13 @@ struct ContentView: View {
         // ensure the timer is stopped
         stopTimer()
         
+        timerActive = true
         // create the new timer
         timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
             // we get notified 1 a minute
             // reduce 1 minute of remaining time
             remainingTime -= 1
-            if remainingTime > 0 {                
+            if remainingTime > 0 {
                 // we need to notify
                 if (remainingTime % reminders == 0) {
                     let progress = remainingTime / reminders
@@ -110,6 +116,7 @@ struct ContentView: View {
             } else {
                 // done, sucessfully
                 stopTimer(true)
+                resetConfig()
             }
         }
         
@@ -118,24 +125,13 @@ struct ContentView: View {
         session.start()
         self.session = session
     }
-    
-    func playHapticFeedback(_ hapticType: WKHapticType, count: Int, delay: TimeInterval) {
-        let device = WKInterfaceDevice.current()
-        
-        if count > 0 {
-            device.play(hapticType)
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                self.playHapticFeedback(hapticType, count: count - 1, delay: delay)
-            }
-        }
-    }
 
     private func stopTimer(_ success: Bool = false) {
         timerActive = false
         timer?.invalidate()
         timer = nil
         session?.invalidate()
-        saveValue(value: 0)
+        
 
         if (success) {
             playHapticFeedback(.success, count: 2, delay: 1);
@@ -150,16 +146,43 @@ struct ContentView: View {
         return talkTime / 4
     }
     
-    private func loadValue() {
+    private func gotFocus() {
         storedTalkTime = UserDefaults.standard.integer(forKey: "storedTalkTime")
+        
+        if (timerActive) {
+            return
+        }
+        
+        loadValue()
+        
+        // everything ready to start a new session
         if (storedTalkTime > 0) {
             talkTime = storedTalkTime
-            //startTimer()
+            startTimer()
         }
+    }
+    
+    private func resetConfig() {
+        saveValue(value: 0)
+    }
+    
+    private func loadValue() {
+        storedTalkTime = UserDefaults.standard.integer(forKey: "storedTalkTime")
     }
     private func saveValue(value: Int) {
         UserDefaults.standard.setValue(value, forKey: "storedTalkTime")
-        loadValue()
+        storedTalkTime = value
+    }
+    
+    func playHapticFeedback(_ hapticType: WKHapticType, count: Int, delay: TimeInterval) {
+        let device = WKInterfaceDevice.current()
+        
+        if count > 0 {
+            device.play(hapticType)
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                self.playHapticFeedback(hapticType, count: count - 1, delay: delay)
+            }
+        }
     }
 }
 
