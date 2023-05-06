@@ -7,15 +7,15 @@ export default function Contact() {
   return (
     <div className="text-black">
       <NextSeo
-        title="404: nine4"
+        title="404: premer"
         description="404 page for all our missing pages"
-        canonical="https://nine4-2.vercel.app/404"
+        canonical="https://premer.klyse.eu/404"
         openGraph={{
-          url: "https://nine4-2.vercel.app/404",
+          url: "https://premer.klyse.eu/404",
         }}
       />
       <Head>
-        <title>nine4</title>
+        <title>premer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />

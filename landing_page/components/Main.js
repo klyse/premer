@@ -3,7 +3,7 @@ export default function Main() {
     <section className="text-gray-600 body-font">
       <div className="max-w-7xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 md:ml-24 pt-6 flex flex-col md:items-start md:text-left mb-40 items-center text-center">
-          <h1 className="mb-5 sm:text-6xl text-5xl items-center Avenir xl:w-2/2 text-gray-900">
+          <h1 className="mb-5 sm:text-6xl text-5xl items-center Avenir xl:w-2/2 text-blue">
             Vibration based timer for your next presentation
           </h1>
           <p className="mb-4 xl:w-3/4 text-gray-600 text-lg">
@@ -12,7 +12,7 @@ export default function Main() {
           <div className="flex justify-center">
             <a
               className="inline-flex items-center px-5 py-3 mt-2 font-medium text-white transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-gray-900"
-              href="https://github.com/r1/nine4-2/"
+              href="https://apps.apple.com/us/app/premer/id6448866927"
             >
               <span className="justify-center">Find out more</span>
             </a>

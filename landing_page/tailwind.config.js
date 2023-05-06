@@ -1,25 +1,15 @@
 module.exports = {
   content: ["./components/**/*.js", "./pages/**/*.js"],
-  darkMode: true, // or 'media' or 'class'
   theme: {
-    extend: {
-      colors: {
-        gray: {
-          100: "#FBFBFB",
-          200: "#EAEAEA",
-          300: "#DFDFDF",
-          400: "#999999",
-          500: "#7F7F7F",
-          600: "#666666",
-          700: "#4C4C4C",
-          800: "#333333",
-          900: "#191919",
-        },
-      },
+    colors: {
+      turquoise: "#29D3DA",
+      blue: "#0077FF",
+      blue2: "#064093",
+      blue3: "#084698",
+      beige: "#E0B386",
+      pink1: "#DA498C",
+      pink2: "#961484",
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };
