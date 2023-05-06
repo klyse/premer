@@ -78,7 +78,7 @@ struct ContentView: View {
     }
     
     private func startTimer() {
-        remainingTime = talkTime
+        remainingTime = talkTime - 1
         timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
             if remainingTime > 0 {
                 remainingTime -= 1
