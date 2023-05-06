@@ -57,7 +57,7 @@ struct ContentView: View {
             Button {
                 timerActive.toggle()
                 
-                if (timerActive){
+                if (timerActive) {
                     startTimer()
                     WKInterfaceDevice.current().play(.start)
                 }
