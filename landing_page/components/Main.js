@@ -1,12 +1,12 @@
 export default function Main() {
   return (
-    <section className="text-gray-600 body-font">
+    <section className="body-font">
       <div className="max-w-7xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 md:ml-24 pt-6 flex flex-col md:items-start md:text-left mb-40 items-center text-center">
           <h1 className="mb-5 sm:text-6xl text-5xl items-center Avenir xl:w-2/2 text-turquoise">
             Vibration based timer for your next presentation
           </h1>
-          <p className="mb-4 xl:w-3/4 text-gray-600 text-lg">
+          <p className="mb-4 xl:w-3/4 text-lg">
             premer is a free Apple Watch app that helps you keep track of time during a talk.
           </p>
           <div className="flex justify-center">
@@ -28,10 +28,10 @@ export default function Main() {
       </div>
       <div className="grr max-w-7xl pt-20 mx-auto text-center">
         <h1 className="mb-8 text-6xl Avenir font-semibold">
-          Less code, less effort.
+          Never run out of time again.
         </h1>
         <h1 className="mb-8 text-2xl Avenir font-semibold text-center">
-          Minify your CSS with Tailwind's built in PostCSS support.
+          Get four vibration indications during your talk.
         </h1>
         <div className="container flex flex-col items-center justify-center mx-auto rounded-lg ">
           <img
@@ -55,7 +55,7 @@ export default function Main() {
               name="email"
               type="email"
               autoComplete="email"
-              className="border border-gray-600 w-1/4 pr-2 pl-2 py-3 mt-2 rounded-md text-gray-800 font-semibold hover:border-gray-900"
+              className="border border-gray-600 w-1/4 pr-2 pl-2 py-3 mt-2 rounded-md font-semibold hover:border-gray-900"
             ></input>{" "}
             <a
               className="inline-flex items-center px-14 py-3 mt-2 ml-2 font-medium transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-gray-900"
