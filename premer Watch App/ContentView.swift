@@ -3,6 +3,7 @@ import WatchKit
 import Combine
 
 struct ContentView: View {
+    @State private var storedTalkTime: Int = UserDefaults.standard.integer(forKey: "storedTalkTime")
     @State var talkTime: Int = 5
     @State var remainingTime: Int = 60
     @State var timerActive = false
@@ -55,6 +56,11 @@ struct ContentView: View {
             Spacer()
             
             Button {
+                if (storedTalkTime != talkTime) {
+                    saveValue(value: talkTime)
+                    return
+                }
+                
                 timerActive.toggle()
                 
                 if (timerActive) {
@@ -67,30 +73,48 @@ struct ContentView: View {
                 }
                 
             } label: {
-                if (timerActive) {
+                if (storedTalkTime != talkTime) {
+                    Text("Prepare Talk")
+                }
+                else if (timerActive) {
                     Text("Stop Talk")
                 }
-                else{
+                else {
                     Text("Start Talk")
                 }
             }
+        }
+        .onAppear
+        {
+            gotFocus()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: WKExtension.applicationDidBecomeActiveNotification)) { _ in
+            gotFocus()
         }
     }
     
     private func startTimer() {
         remainingTime = talkTime - 1
+        let reminders = calcReminders()
+        // ensure the timer is stopped
+        stopTimer()
+        
+        timerActive = true
+        // create the new timer
         timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
+            // we get notified 1 a minute
+            // reduce 1 minute of remaining time
+            remainingTime -= 1
             if remainingTime > 0 {
-                remainingTime -= 1
-                
-                let reminders = calcReminders()
+                // we need to notify
                 if (remainingTime % reminders == 0) {
                     let progress = remainingTime / reminders
                     playHapticFeedback(.directionUp, count: progress, delay: 0.5);
                 }
             } else {
-                stopTimer()
-                playHapticFeedback(.success, count: 2, delay: 1);
+                // done, sucessfully
+                stopTimer(true)
+                resetConfig()
             }
         }
         
@@ -98,6 +122,54 @@ struct ContentView: View {
         session.delegate = WKExtension.shared().delegate as? WKExtendedRuntimeSessionDelegate
         session.start()
         self.session = session
+    }
+
+    private func stopTimer(_ success: Bool = false) {
+        timerActive = false
+        timer?.invalidate()
+        timer = nil
+        session?.invalidate()
+        
+
+        if (success) {
+            playHapticFeedback(.success, count: 2, delay: 1);
+        }
+    }
+
+    private func calcReminders() -> Int {
+        if (talkTime < 4) {
+            return 1;
+        }
+
+        return talkTime / 4
+    }
+    
+    private func gotFocus() {
+        storedTalkTime = UserDefaults.standard.integer(forKey: "storedTalkTime")
+        
+        if (timerActive) {
+            return
+        }
+        
+        loadValue()
+        
+        // everything ready to start a new session
+        if (storedTalkTime > 0) {
+            talkTime = storedTalkTime
+            startTimer()
+        }
+    }
+    
+    private func resetConfig() {
+        saveValue(value: 0)
+    }
+    
+    private func loadValue() {
+        storedTalkTime = UserDefaults.standard.integer(forKey: "storedTalkTime")
+    }
+    private func saveValue(value: Int) {
+        UserDefaults.standard.setValue(value, forKey: "storedTalkTime")
+        storedTalkTime = value
     }
     
     func playHapticFeedback(_ hapticType: WKHapticType, count: Int, delay: TimeInterval) {
@@ -109,21 +181,6 @@ struct ContentView: View {
                 self.playHapticFeedback(hapticType, count: count - 1, delay: delay)
             }
         }
-    }
-
-    private func stopTimer() {
-        timerActive = false
-        timer?.invalidate()
-        timer = nil
-        session?.invalidate()
-    }
-
-    private func calcReminders() -> Int {
-        if (talkTime < 4) {
-            return 1;
-        }
-
-        return talkTime / 4
     }
 }
 
