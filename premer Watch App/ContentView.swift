@@ -92,18 +92,24 @@ struct ContentView: View {
     
     private func startTimer() {
         remainingTime = talkTime - 1
+        let reminders = calcReminders()
+        // ensure the timer is stopped
+        stopTimer()
+        
+        // create the new timer
         timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
-            if remainingTime > 0 {
-                remainingTime -= 1
-                
-                let reminders = calcReminders()
+            // we get notified 1 a minute
+            // reduce 1 minute of remaining time
+            remainingTime -= 1
+            if remainingTime > 0 {                
+                // we need to notify
                 if (remainingTime % reminders == 0) {
                     let progress = remainingTime / reminders
                     playHapticFeedback(.directionUp, count: progress, delay: 0.5);
                 }
             } else {
-                stopTimer()
-                playHapticFeedback(.success, count: 2, delay: 1);
+                // done, sucessfully
+                stopTimer(true)
             }
         }
         
@@ -124,12 +130,16 @@ struct ContentView: View {
         }
     }
 
-    private func stopTimer() {
+    private func stopTimer(_ success: Bool = false) {
         timerActive = false
         timer?.invalidate()
         timer = nil
         session?.invalidate()
         saveValue(value: 0)
+
+        if (success) {
+            playHapticFeedback(.success, count: 2, delay: 1);
+        }
     }
 
     private func calcReminders() -> Int {
