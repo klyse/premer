@@ -3,6 +3,7 @@ import WatchKit
 import Combine
 
 struct ContentView: View {
+    @State private var storedTalkTime: Int = UserDefaults.standard.integer(forKey: "storedTalkTime")
     @State var talkTime: Int = 5
     @State var remainingTime: Int = 60
     @State var timerActive = false
@@ -55,6 +56,11 @@ struct ContentView: View {
             Spacer()
             
             Button {
+                if (storedTalkTime != talkTime) {
+                    saveValue(value: talkTime)
+                    return
+                }
+                
                 timerActive.toggle()
                 
                 if (timerActive) {
@@ -67,13 +73,20 @@ struct ContentView: View {
                 }
                 
             } label: {
-                if (timerActive) {
+                if (storedTalkTime != talkTime) {
+                    Text("Prepare Talk")
+                }
+                else if (timerActive) {
                     Text("Stop Talk")
                 }
-                else{
+                else {
                     Text("Start Talk")
                 }
             }
+        }
+        .onAppear
+        {
+            loadValue()
         }
     }
     
@@ -116,6 +129,7 @@ struct ContentView: View {
         timer?.invalidate()
         timer = nil
         session?.invalidate()
+        saveValue(value: 0)
     }
 
     private func calcReminders() -> Int {
@@ -124,6 +138,18 @@ struct ContentView: View {
         }
 
         return talkTime / 4
+    }
+    
+    private func loadValue() {
+        storedTalkTime = UserDefaults.standard.integer(forKey: "storedTalkTime")
+        if (storedTalkTime > 0) {
+            talkTime = storedTalkTime
+            //startTimer()
+        }
+    }
+    private func saveValue(value: Int) {
+        UserDefaults.standard.setValue(value, forKey: "storedTalkTime")
+        loadValue()
     }
 }
 
