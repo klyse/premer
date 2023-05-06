@@ -86,11 +86,9 @@ struct ContentView: View {
         }
         .onAppear
         {
-            loadValue()
             gotFocus()
         }
         .onReceive(NotificationCenter.default.publisher(for: WKExtension.applicationDidBecomeActiveNotification)) { _ in
-            loadValue()
             gotFocus()
         }
     }
