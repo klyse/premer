@@ -27,11 +27,11 @@ export default function Main() {
           ></img>
         </div>
       </div>
-      <div id="more" className="grr max-w-7xl pt-20 mx-auto text-center">
+      <div id="more" className="max-w-7xl pt-20 mx-auto text-center">
         <h1 className="mb-8 text-6xl Avenir font-semibold">
           Never run out of time again.
         </h1>
-        <h1 className="mb-8 mx-4 xl:w-3/4 text-lg m-auto">
+        <h1 className="mb-8 md:w-3/4 text-lg mx-auto px-4 text-center">
           Get four vibration indications on your Apple Watch while your
           presentation. You'll get a vibration after every quarter of your talk.
           So you always know how much time is left.
