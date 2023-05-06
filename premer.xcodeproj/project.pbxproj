@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40739FDF2A068FA00001C7E7 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40739FDE2A068FA00001C7E7 /* ExtensionDelegate.swift */; };
 		40E365DA2A06526E00F521C7 /* premer Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 40E365D92A06526E00F521C7 /* premer Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		40E365DF2A06526E00F521C7 /* premerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E365DE2A06526E00F521C7 /* premerApp.swift */; };
 		40E365E12A06526E00F521C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E365E02A06526E00F521C7 /* ContentView.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		4008C07F2A06565A00F47AC4 /* premer-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "premer-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		40739FDE2A068FA00001C7E7 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		40E365D32A06526E00F521C7 /* premer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = premer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E365D92A06526E00F521C7 /* premer Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "premer Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E365DE2A06526E00F521C7 /* premerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = premerApp.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				4008C07F2A06565A00F47AC4 /* premer-Watch-App-Info.plist */,
 				40E365DE2A06526E00F521C7 /* premerApp.swift */,
+				40739FDE2A068FA00001C7E7 /* ExtensionDelegate.swift */,
 				40E365E02A06526E00F521C7 /* ContentView.swift */,
 				40E365E22A06526F00F521C7 /* Assets.xcassets */,
 				40E365E42A06526F00F521C7 /* Preview Content */,
@@ -195,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40E365E12A06526E00F521C7 /* ContentView.swift in Sources */,
+				40739FDF2A068FA00001C7E7 /* ExtensionDelegate.swift in Sources */,
 				40E365DF2A06526E00F521C7 /* premerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

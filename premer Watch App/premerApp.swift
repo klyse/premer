@@ -1,10 +1,3 @@
-//
-//  premerApp.swift
-//  premer Watch App
-//
-//  Created by Klaus on 2023-05-05.
-//
-
 import SwiftUI
 
 @main
