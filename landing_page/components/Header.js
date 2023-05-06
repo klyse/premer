@@ -16,7 +16,7 @@ export default function Header() {
             </h1>
           </a>
           <button
-            className="text-white cursor-pointer leading-none px-3 py-1 md:hidden outline-none focus:outline-none "
+            className="cursor-pointer leading-none px-3 py-1 md:hidden outline-none focus:outline-none "
             type="button"
             aria-label="button"
             onClick={() => setNavbarOpen(!navbarOpen)}
@@ -49,7 +49,7 @@ export default function Header() {
             <ul className="flex flex-grow justify-end flex-wrap items-center">
               <li>
                 <a
-                  className="inline-flex items-center px-4 py-2 mt-2 font-medium text-white transition duration-500 ease-in-out transform bg-transparent rounded-lg text-md md:mt-0 md:ml-4 bg-gray-900"
+                  className="inline-flex items-center px-4 py-2 mt-2 font-medium transition duration-500 ease-in-out transform bg-transparent rounded-lg text-md md:mt-0 md:ml-4 bg-gray-900"
                   href="https://apps.apple.com/us/app/premer/id6448866927"
                 >
                   <span className="justify-center">Download</span>

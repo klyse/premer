@@ -251,7 +251,7 @@ export default function Home() {
       <p>
         support@klyse.eu
         <br />
-        https://premer.klyse.eu
+        https://premer.klyse.eu{" "}
       </p>
     </>
   );
