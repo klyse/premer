@@ -11,9 +11,12 @@ export default function Header() {
             href="/"
             className="text-lg font-semibold rounded-lg tracking-widest focus:outline-none focus:shadow-outline"
           >
-            <h1 className="text-4xl Avenir tracking-tighter md:text-4x1 lg:text-3xl">
-              PREMER
-            </h1>
+            <div className="flex">
+              <h1 className="text-4xl Avenir tracking-tighter md:text-4x1 lg:text-3xl pr-4">
+                PREMER
+              </h1>
+              <img src="/images/logo.svg" className="w-8" />
+            </div>
           </a>
           <button
             className="cursor-pointer leading-none px-3 py-1 md:hidden outline-none focus:outline-none "
