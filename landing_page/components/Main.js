@@ -7,7 +7,8 @@ export default function Main() {
             Vibration based timer for your next presentation
           </h1>
           <p className="mb-4 xl:w-3/4 text-lg">
-            premer is a free Apple Watch app that helps you keep track of time during a talk.
+            PREMER is a free Apple Watch app that helps you keep track of time
+            during a talk.
           </p>
           <div className="flex justify-center">
             <a

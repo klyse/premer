@@ -8,15 +8,15 @@ export default function Home() {
   return (
     <div>
       <NextSeo
-        title="Home: premer"
-        description="Welcome to premer homepage."
+        title="Home: PREMER"
+        description="Welcome to PREMER homepage."
         canonical="https://premer.klyse.eu/"
         openGraph={{
           url: "https://premer.klyse.eu/",
         }}
       />
       <Head>
-        <title>premer</title>
+        <title>PREMER | Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />

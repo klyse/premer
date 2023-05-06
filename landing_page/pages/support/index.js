@@ -6,7 +6,7 @@ export default function Home() {
       <Header />
       <div class="py-24 max-w-sm rounded overflow-hidden shadow-lg mx-auto">
         <div class="w-full max-w-xs self-center m-5">
-          <h1 class="text-2xl pb-4">premer Support</h1>
+          <h1 class="text-2xl pb-4">PREMER Support</h1>
           <span>
             If you need support, please feel free to reach out to us at{" "}
             <a

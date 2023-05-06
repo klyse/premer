@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <div>
       <NextSeo
-        title="404: premer"
+        title="404: PREMER"
         description="404 page for all our missing pages"
         canonical="https://premer.klyse.eu/404"
         openGraph={{
@@ -15,7 +15,7 @@ export default function Contact() {
         }}
       />
       <Head>
-        <title>premer</title>
+        <title>PREMER</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />

@@ -43,7 +43,7 @@ export default function Footer() {
                 href="/"
                 className="text-md transition-colors duration-300 hover:text-deep-purple-accent-400 font-semibold tracking-tight"
               >
-                © 2023 premer
+                © 2023 PREMER
               </a>
             </li>
           </ul>
