@@ -21,7 +21,7 @@ export default function Main() {
         <div className="xl:mr-44 sm:mr-0 sm:mb-28 mb-0 lg:mb-0 mr-48 md:pl-10">
           <img
             className="w-80 md:ml-1 ml-24"
-            alt="iPhone-12"
+            alt="watch"
             src="/images/watch.png"
           ></img>
         </div>
