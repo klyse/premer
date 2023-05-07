@@ -1,107 +1,107 @@
 export default function Home() {
   return (
     <>
-      <h2>premer Mobile App Terms of Service</h2>
+      <h2>PREMER Mobile App Terms of Service</h2>
       <p>
-        These Terms of Service govern your use of premer, our website located at{" "}
+        These Terms of Service govern your use of PREMER, our website located at{" "}
         <a href="https://premer.klyse.eu">https://premer.klyse.eu</a>, and any
-        related services provided by premer.{" "}
+        related services provided by PREMER.{" "}
       </p>
       <p>
-        When you use premer, you agree to abide by these Terms of Service and to
+        When you use PREMER, you agree to abide by these Terms of Service and to
         comply with all applicable laws and regulations. If you do not agree
         with these Terms of Service, you are prohibited from further using the
         app, accessing our website, or using any other services provided by
-        premer.{" "}
+        PREMER.{" "}
       </p>
       <p>
-        If you access or download premer from Apple App Store you agree to any
+        If you access or download PREMER from Apple App Store you agree to any
         Usage Rules set forth in the App Store Terms of Service.{" "}
       </p>
       <p>
-        We, premer, reserve the right to review and amend any of these Terms of
+        We, PREMER, reserve the right to review and amend any of these Terms of
         Service at our sole discretion. Upon doing so, we will update this page
         and notify you through the app and/or the email address you provided
         when you created your account. Any changes to these Terms of Service
         will take effect immediately from the date of publication.{" "}
       </p>
-      <p>These Terms of Service were last updated on 6 May 2023. </p>
+      <p>These Terms of Service were last updated on 7 May 2023. </p>
       <h3>Limitations of Use</h3>
       <p>
-        By using premer and our website, you warrant on behalf of yourself, any
+        By using PREMER and our website, you warrant on behalf of yourself, any
         entity who you represent who has entered into these Terms of Service,
         and your users that you will not:{" "}
       </p>
       <ol>
         <li>
           modify, copy, prepare derivative works of, decompile, or reverse
-          engineer premer or any materials and software contained within premer or
+          engineer PREMER or any materials and software contained within PREMER or
           on our website;
         </li>
         <li>
-          remove any copyright or other proprietary notations from premer or any
-          materials and software contained within premer or on our website;
+          remove any copyright or other proprietary notations from PREMER or any
+          materials and software contained within PREMER or on our website;
         </li>
         <li>
-          transfer premer or any of its associated materials to another person or
+          transfer PREMER or any of its associated materials to another person or
           &ldquo;mirror&rdquo; the materials on any other server;
         </li>
         <li>
-          knowingly or negligently use premer or any of its associated services
+          knowingly or negligently use PREMER or any of its associated services
           in a way that abuses or disrupts our networks or any other service
-          premer provides;
+          PREMER provides;
         </li>
         <li>
-          use premer or its associated services to transmit or publish any
+          use PREMER or its associated services to transmit or publish any
           harassing, indecent, obscene, fraudulent, or unlawful material;
         </li>
         <li>
-          use premer or its associated services in violation of any applicable
+          use PREMER or its associated services in violation of any applicable
           laws or regulations;
         </li>
-        <li>use premer to send unauthorised advertising or spam;</li>
+        <li>use PREMER to send unauthorised advertising or spam;</li>
         <li>
           harvest, collect, or gather user data without the user’s consent; or
         </li>
         <li>
-          use premer or its associated services in such a way that may infringe
+          use PREMER or its associated services in such a way that may infringe
           the privacy, intellectual property rights, or other rights of third
           parties.
         </li>
       </ol>
       <h3>Intellectual Property</h3>
       <p>
-        The intellectual property in the materials in premer and on our website
-        are owned by or licensed to premer. You may download premer to view, use
+        The intellectual property in the materials in PREMER and on our website
+        are owned by or licensed to PREMER. You may download PREMER to view, use
         and display the application on your mobile device for your personal use
         only.{" "}
       </p>
       <p>
         This constitutes the grant of a license, not a transfer of title. This
         license shall automatically terminate if you violate any of these
-        restrictions or these Terms of Service and may be terminated by premer at
+        restrictions or these Terms of Service and may be terminated by PREMER at
         any time.{" "}
       </p>
       <h3>Automatic Updates</h3>
       <p>
-        You give us permission to download and install updates to premer on your
+        You give us permission to download and install updates to PREMER on your
         device in accordance with your privacy preferences. This permission can
-        be revoked at any time by deleting premer from your device.{" "}
+        be revoked at any time by deleting PREMER from your device.{" "}
       </p>
       <h3>Liability</h3>
       <p>
-        premer and the materials in premer and on our website are provided on an
-        'as is' basis. To the extent permitted by law, premer makes no
+        PREMER and the materials in PREMER and on our website are provided on an
+        'as is' basis. To the extent permitted by law, PREMER makes no
         warranties, expressed or implied, and hereby disclaims and negates all
         other warranties including, without limitation, implied warranties or
         conditions of merchantability, fitness for a particular purpose, or
         non-infringement of intellectual property, or other violation of rights.{" "}
       </p>
       <p>
-        In no event shall premer or its suppliers be liable for any consequential
+        In no event shall PREMER or its suppliers be liable for any consequential
         loss suffered or incurred by you or any third party arising from the use
-        or inability to use premer, our website, or any other services provided
-        by premer or the materials in premer, even if premer or an authorised
+        or inability to use PREMER, our website, or any other services provided
+        by PREMER or the materials in PREMER, even if PREMER or an authorised
         representative has been notified, orally or in writing, of the
         possibility of such damage.{" "}
       </p>
@@ -120,46 +120,46 @@ export default function Home() {
       </p>
       <h3>Accuracy of Materials</h3>
       <p>
-        The materials appearing in premer or on our website are not comprehensive
+        The materials appearing in PREMER or on our website are not comprehensive
         and are for general information purposes only. To the extent permitted
-        by law, premer does not warrant or make any representations concerning
+        by law, PREMER does not warrant or make any representations concerning
         the accuracy, likely results, or reliability of the use of the materials
-        in premer or on our website, or otherwise relating to such materials or
-        on any resources linked to premer and our website.{" "}
+        in PREMER or on our website, or otherwise relating to such materials or
+        on any resources linked to PREMER and our website.{" "}
       </p>
       <h3>Links</h3>
       <p>
-        premer has not reviewed all of the sites linked to premer or on its
+        PREMER has not reviewed all of the sites linked to PREMER or on its
         corresponding website and is not responsible for the contents of any
         such linked site. The inclusion of any link does not imply endorsement,
-        approval or control by premer of the site. Use of any such linked website
+        approval or control by PREMER of the site. Use of any such linked website
         is at your own risk and we strongly advise you make your own
         investigations with respect to the suitability of those sites.{" "}
       </p>
       <h3>Notice regarding Apple</h3>
       <p>
-        To the extent that you are using or accessing premer on an iOS device,
+        To the extent that you are using or accessing PREMER on an iOS device,
         you acknowledge and agree to the terms of this clause. You acknowledge
-        that these Terms of Service are between you and premer only, not with
-        Apple Inc. (Apple), and Apple is not responsible for premer and any
-        materials available in premer.{" "}
+        that these Terms of Service are between you and PREMER only, not with
+        Apple Inc. (Apple), and Apple is not responsible for PREMER and any
+        materials available in PREMER.{" "}
       </p>
       <p>
         Apple has no obligation to furnish you with any maintenance and support
-        services with respect to premer.{" "}
+        services with respect to PREMER.{" "}
       </p>
       <p>
-        If premer fails to conform to any applicable warranty, you may notify
+        If PREMER fails to conform to any applicable warranty, you may notify
         Apple and Apple will refund the purchase price of the mobile application
         to you. To the maximum extent permitted by applicable law, Apple will
-        have no other warranty obligation whatsoever with respect to premer and
+        have no other warranty obligation whatsoever with respect to PREMER and
         any other claims, losses, liabilities, damages, costs or expenses
         attributable to any failure to conform to any warranty will be our
         responsibility.{" "}
       </p>
       <p>
         Apple is not responsible for addressing any claims by you or any third
-        party relating to premer or your use of premer, including but not limited
+        party relating to PREMER or your use of PREMER, including but not limited
         to (1) product liability claims; (2) any claim that our mobile
         application fails to conform to any applicable legal or regulatory
         requirement; and (3) claims arising under consumer protection or similar
@@ -172,7 +172,7 @@ export default function Home() {
       </p>
       <p>
         You agree to comply with any applicable third-party terms when using
-        premer, including any Usage Rules set forth in the Apple App Store
+        PREMER, including any Usage Rules set forth in the Apple App Store
         Agreement of Service.{" "}
       </p>
       <p>
@@ -191,7 +191,7 @@ export default function Home() {
       </p>
       <h3>Right to Terminate</h3>
       <p>
-        We may suspend or terminate your right to use premer and these Terms of
+        We may suspend or terminate your right to use PREMER and these Terms of
         Service immediately upon written notice to you for any breach of these
         Terms of Service.{" "}
       </p>

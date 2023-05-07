@@ -1,11 +1,11 @@
 export default function Home() {
   return (
     <>
-      <h2>premer Cookie Policy</h2>
+      <h2>PREMER Cookie Policy</h2>
       <p>
         We use cookies to help improve your experience of our website at{" "}
         <a href="https://premer.klyse.eu">https://premer.klyse.eu</a>. This
-        cookie policy is part of premer&#39;s privacy policy. It covers the use
+        cookie policy is part of PREMER&#39;s privacy policy. It covers the use
         of cookies between your device and our site.{" "}
       </p>
       <p>
