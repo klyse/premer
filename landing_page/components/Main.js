@@ -75,16 +75,16 @@ export default function Main() {
                 name="email"
                 type="email"
                 autoComplete="email"
-                className="border border-gray-600 w-1/4 pr-2 pl-2 py-3 mt-2 rounded-md font-semibold hover:border-gray-900 text-black"
+                className="border border-gray-600 w-72 pr-2 pl-2 py-3 mt-2 rounded-md font-semibold hover:border-gray-900 text-black"
               ></input>{" "}
               <button
                 type="submit"
-                className="inline-flex items-center px-14 py-3 mt-2 ml-2 font-medium transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-gray-900"
+                className="inline-flex items-center py-3 mt-2 xl:ml-2 w-72 font-medium transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-gray-900"
                 href="/"
               >
-                <span className="justify-center">Subscribe</span>
+                <span className="mx-auto">Subscribe</span>
               </button>
-              <p className="text-sm">
+              <p className="text-sm pt-4">
                 By Subscribing you agree to the{" "}
                 <a
                   className="hover:underline text-blue-600"
