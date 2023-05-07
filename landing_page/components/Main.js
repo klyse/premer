@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export default function Main() {
+  const [email, setEmail] = useState(null);
+
   return (
     <section className="body-font">
       <div className="max-w-7xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
@@ -72,12 +76,14 @@ export default function Main() {
               </h1>
               <input
                 placeholder="jack@example.com"
+                onChange={(e) => setEmail(e.target.value)}
                 name="email"
                 type="email"
                 autoComplete="email"
                 className="border border-gray-600 w-72 pr-2 pl-2 py-3 mt-2 rounded-md font-semibold hover:border-gray-900 text-black"
               ></input>{" "}
               <button
+                disabled={!email}
                 type="submit"
                 className="inline-flex items-center py-3 mt-2 xl:ml-2 w-72 font-medium transition duration-500 ease-in-out transform bg-transparent border rounded-lg bg-gray-900"
                 href="/"
