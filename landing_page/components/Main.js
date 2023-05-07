@@ -82,6 +82,7 @@ export default function Main() {
               >
                 <span className="justify-center">Subscribe</span>
               </button>
+              <p className="text-sm">By Subscribing you agree to the <a className="hover:underline text-blue-600" href="/terms-of-service">Terms of Servie</a> and to receive email from us ;)</p>
             </form>
           </div>
         </div>
