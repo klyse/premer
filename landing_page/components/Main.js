@@ -36,12 +36,14 @@ export default function Main() {
           presentation. You'll get a vibration after every quarter of your talk.
           So you always know how much time is left.
         </h1>
-        <div className="container flex flex-col items-center justify-center mx-auto rounded-lg ">
-          <img
-            className="object-cover object-center w-3/4 mb-10 g327 border rounded-lg shadow-md"
-            alt="Placeholder Image"
-            src="./images/placeholder.png"
-          ></img>
+        <div className="container flex flex-col items-center justify-center mx-auto w-3/4 aspect-video">
+          <iframe
+            src="https://player.vimeo.com/video/824473133?h=2eb22d031e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            width="100%"
+            height="100%"
+            allow="autoplay; fullscreen; picture-in-picture"
+            title="PREMER - Vibration based Presentation Timer"
+          ></iframe>
         </div>
       </div>
       <section className="relative">
@@ -82,7 +84,16 @@ export default function Main() {
               >
                 <span className="justify-center">Subscribe</span>
               </button>
-              <p className="text-sm">By Subscribing you agree to the <a className="hover:underline text-blue-600" href="/terms-of-service">Terms of Servie</a> and to receive email from us ;)</p>
+              <p className="text-sm">
+                By Subscribing you agree to the{" "}
+                <a
+                  className="hover:underline text-blue-600"
+                  href="/terms-of-service"
+                >
+                  Terms of Servie
+                </a>{" "}
+                and to receive email from us ;)
+              </p>
             </form>
           </div>
         </div>
