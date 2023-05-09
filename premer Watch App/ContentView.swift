@@ -91,6 +91,9 @@ struct ContentView: View {
         .onReceive(NotificationCenter.default.publisher(for: WKExtension.applicationDidBecomeActiveNotification)) { _ in
             gotFocus()
         }
+        .onReceive(NotificationCenter.default.publisher(for: WKExtension.applicationDidEnterBackgroundNotification)) { _ in
+            lostFocus()
+        }
     }
     
     private func startTimer() {
@@ -118,29 +121,35 @@ struct ContentView: View {
             }
         }
         
-        let session = WKExtendedRuntimeSession()
-        session.delegate = WKExtension.shared().delegate as? WKExtendedRuntimeSessionDelegate
-        session.start()
-        self.session = session
+        let newSession = WKExtendedRuntimeSession()
+        newSession.delegate = WKExtension.shared().delegate as? WKExtendedRuntimeSessionDelegate
+        newSession.start()
+        
+        session = newSession
     }
-
+    
     private func stopTimer(_ success: Bool = false) {
         timerActive = false
         timer?.invalidate()
         timer = nil
-        session?.invalidate()
         
-
+        if (session != nil && (
+            session?.state == WKExtendedRuntimeSessionState.scheduled ||
+            session?.state == WKExtendedRuntimeSessionState.running)) {
+            session?.invalidate()
+        }
+        
+        
         if (success) {
             playHapticFeedback(.success, count: 2, delay: 1);
         }
     }
-
+    
     private func calcReminders() -> Int {
         if (talkTime < 4) {
             return 1;
         }
-
+        
         return talkTime / 4
     }
     
@@ -158,6 +167,19 @@ struct ContentView: View {
             talkTime = storedTalkTime
             startTimer()
         }
+    }
+    
+    private func lostFocus() {
+        if (timerActive) {
+            return
+        }
+        
+        if (storedTalkTime == talkTime) {
+            return
+        }
+        
+        // reset to a default as the user has not saved
+        saveValue(value: 0)
     }
     
     private func resetConfig() {
