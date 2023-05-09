@@ -40,6 +40,7 @@
 				40E365D42A06526E00F521C7 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		40E365D42A06526E00F521C7 /* Products */ = {
 			isa = PBXGroup;
