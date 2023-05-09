@@ -7,40 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40E365DA2A06526E00F521C7 /* premer Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 40E365D92A06526E00F521C7 /* premer Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		40E365DF2A06526E00F521C7 /* premerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E365DE2A06526E00F521C7 /* premerApp.swift */; };
 		40E365E12A06526E00F521C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E365E02A06526E00F521C7 /* ContentView.swift */; };
 		40E365E32A06526F00F521C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E365E22A06526F00F521C7 /* Assets.xcassets */; };
 		40E365E62A06526F00F521C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E365E52A06526F00F521C7 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		40E365DB2A06526E00F521C7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 40E365CD2A06526E00F521C7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 40E365D82A06526E00F521C7;
-			remoteInfo = "premer Watch App";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		40E365EC2A06526F00F521C7 /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				40E365DA2A06526E00F521C7 /* premer Watch App.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		4008C07F2A06565A00F47AC4 /* premer-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "premer-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
-		40E365D32A06526E00F521C7 /* premer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = premer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E365D92A06526E00F521C7 /* premer Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "premer Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E365DE2A06526E00F521C7 /* premerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = premerApp.swift; sourceTree = "<group>"; };
 		40E365E02A06526E00F521C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,7 +44,6 @@
 		40E365D42A06526E00F521C7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				40E365D32A06526E00F521C7 /* premer.app */,
 				40E365D92A06526E00F521C7 /* premer Watch App.app */,
 			);
 			name = Products;
@@ -99,23 +72,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		40E365D22A06526E00F521C7 /* premer */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 40E365ED2A06526F00F521C7 /* Build configuration list for PBXNativeTarget "premer" */;
-			buildPhases = (
-				40E365D12A06526E00F521C7 /* Resources */,
-				40E365EC2A06526F00F521C7 /* Embed Watch Content */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				40E365DC2A06526E00F521C7 /* PBXTargetDependency */,
-			);
-			name = premer;
-			productName = premer;
-			productReference = 40E365D32A06526E00F521C7 /* premer.app */;
-			productType = "com.apple.product-type.application.watchapp2-container";
-		};
 		40E365D82A06526E00F521C7 /* premer Watch App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40E365E92A06526F00F521C7 /* Build configuration list for PBXNativeTarget "premer Watch App" */;
@@ -143,9 +99,6 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					40E365D22A06526E00F521C7 = {
-						CreatedOnToolsVersion = 14.3;
-					};
 					40E365D82A06526E00F521C7 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -164,20 +117,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				40E365D22A06526E00F521C7 /* premer */,
 				40E365D82A06526E00F521C7 /* premer Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		40E365D12A06526E00F521C7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		40E365D72A06526E00F521C7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,14 +145,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		40E365DC2A06526E00F521C7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 40E365D82A06526E00F521C7 /* premer Watch App */;
-			targetProxy = 40E365DB2A06526E00F521C7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		40E365E72A06526F00F521C7 /* Debug */ = {
@@ -339,7 +276,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = eu.klyse.premer.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.klyse.premer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -370,7 +307,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = eu.klyse.premer.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.klyse.premer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -379,43 +316,6 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 9.4;
-			};
-			name = Release;
-		};
-		40E365EE2A06526F00F521C7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = 3S86R3L8VY;
-				INFOPLIST_KEY_CFBundleDisplayName = PREMER;
-				MARKETING_VERSION = 0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = eu.klyse.premer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		40E365EF2A06526F00F521C7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = 3S86R3L8VY;
-				INFOPLIST_KEY_CFBundleDisplayName = PREMER;
-				MARKETING_VERSION = 0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = eu.klyse.premer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -436,15 +336,6 @@
 			buildConfigurations = (
 				40E365EA2A06526F00F521C7 /* Debug */,
 				40E365EB2A06526F00F521C7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		40E365ED2A06526F00F521C7 /* Build configuration list for PBXNativeTarget "premer" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				40E365EE2A06526F00F521C7 /* Debug */,
-				40E365EF2A06526F00F521C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
