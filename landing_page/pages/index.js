@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
 import { NextSeo } from "next-seo";
+import Banner from "../components/Banner";
 
 export default function Home() {
   return (
